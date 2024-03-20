@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "debian_package_stats"
+version = "1.0.0"
+description = "Run statistics over debian packages."
+authors = ["Harel Keres <keresh3@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "debian_package_stats", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8.16"
+requests = "^2.31.0"
+columnar = "^1.4.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+black = "^23.9.1"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
